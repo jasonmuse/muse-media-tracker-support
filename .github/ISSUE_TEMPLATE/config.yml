@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Send feedback privately in the app
+    url: https://jasonmuse.github.io/muse-media-tracker-support/
+    about: In Muse Shelf, open Settings › Feedback. It comes straight to the developer, and replies show up in the app.
+  - name: Cancel or change Muse Pro
+    url: https://apps.apple.com/account/subscriptions
+    about: Subscriptions are managed in your Apple account.
+  - name: Ask Apple for a refund
+    url: https://reportaproblem.apple.com
+    about: Apple handles payments and refunds for App Store purchases.

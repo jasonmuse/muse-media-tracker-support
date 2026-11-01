@@ -1,0 +1,34 @@
+name: Muse Pro or purchase help
+description: Pro isn't showing, a restore didn't work, or a code didn't apply.
+labels: ["purchase"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        First try **Settings › Restore purchases** while signed in to the Muse account you bought Pro with. To cancel or change a plan, use your Apple account's Subscriptions. For refunds, use [reportaproblem.apple.com](https://reportaproblem.apple.com).
+
+        Please don't post receipts, order numbers, emails or account details here; this page is public. If you need to share them, send feedback from the app instead.
+  - type: dropdown
+    id: plan
+    attributes:
+      label: What did you buy?
+      options:
+        - Muse Pro monthly
+        - Muse Pro yearly
+        - Muse Pro lifetime
+        - Remove Ads (earlier version)
+        - An offer code
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What's going wrong?
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and iOS version
+      placeholder: iPhone 16, iOS 26.1

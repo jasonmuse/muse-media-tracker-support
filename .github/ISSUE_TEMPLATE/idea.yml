@@ -1,0 +1,14 @@
+name: Idea or request
+description: Suggest a feature, an app to import from, or something to make Muse better.
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Muse to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: How would it help you?

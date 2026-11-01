@@ -1,0 +1,35 @@
+name: Something isn't working
+description: Report a bug or a crash in Muse Shelf.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make Muse better. Requests are public, so please leave out your email, passwords, sign-in codes and anything private in your library.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What were you doing right before?
+      placeholder: "1. Opened Explore\n2. Chose Games\n3. ..."
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      placeholder: iPhone 16, iPad Air, iPhone Duo...
+  - type: input
+    id: ios
+    attributes:
+      label: iOS version
+      description: Settings › General › About
+  - type: input
+    id: version
+    attributes:
+      label: Muse Shelf version
+      description: In Muse, Settings › About › Version
