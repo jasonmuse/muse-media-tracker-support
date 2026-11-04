@@ -488,14 +488,272 @@ details[open] summary::after {
   }
 }
 
-@media (max-width: 380px) {
-  .brand span {
-    display: none;
+/* Phones: the page links get their own row under the brand, so all four always fit. */
+@media (max-width: 560px) {
+  .site-header {
+    flex-wrap: wrap;
+    row-gap: 14px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  .nav a {
+    padding: 7px 12px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   summary::after {
     transition: none;
+  }
+}
+
+/* Contact: a private message to the Muse team */
+.contact {
+  display: grid;
+  gap: 22px;
+  margin-top: 8px;
+  padding: 30px;
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: inset 0 0 0 1px var(--card-edge), 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.contact[hidden] {
+  display: none;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.topics legend,
+.field > span {
+  display: block;
+  margin-bottom: 10px;
+  padding: 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.field > span em {
+  color: var(--soft);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.topic {
+  position: relative;
+}
+
+.topic input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.topic span {
+  display: inline-block;
+  padding: 9px 15px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.09);
+  transition: color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.topic:hover span {
+  color: var(--ink);
+}
+
+.topic input:checked + span {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--violet) 26%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--violet-ink) 70%, transparent), 0 0 24px color-mix(in srgb, var(--violet) 22%, transparent);
+}
+
+.topic input:focus-visible + span {
+  outline: 2px solid var(--violet-ink);
+  outline-offset: 3px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.field {
+  position: relative;
+  display: grid;
+  min-width: 0;
+}
+
+.field[hidden] {
+  display: none;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 14px;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  background: rgba(6, 8, 16, 0.62);
+  box-shadow: inset 0 0 0 1px rgba(196, 181, 253, 0.16);
+  transition: box-shadow 160ms ease;
+}
+
+.field textarea {
+  min-height: 150px;
+  padding-bottom: 30px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 1px var(--violet-ink), 0 0 0 4px color-mix(in srgb, var(--violet) 22%, transparent);
+}
+
+.field ::placeholder {
+  color: var(--soft);
+}
+
+.count {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  color: var(--soft);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
+.field-hint {
+  margin-top: 8px;
+  color: var(--soft);
+  font-size: 0.85rem;
+}
+
+.trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.send-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.button.send,
+.button.ghost {
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button.send {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #e4dbff, var(--violet-ink) 55%, #a68afa);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--violet) 30%, transparent);
+}
+
+.button.send[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.button.ghost {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.button.ghost:hover {
+  color: var(--ink);
+}
+
+.status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.status.error {
+  color: var(--pink-ink);
+}
+
+.sent {
+  justify-items: start;
+  gap: 12px;
+}
+
+.sent:focus {
+  outline: none;
+}
+
+.sent h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+}
+
+.sent p {
+  margin: 0 0 6px;
+  color: var(--muted);
+}
+
+.sent-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  color: var(--mint-ink);
+  background: color-mix(in srgb, var(--mint) 16%, transparent);
+}
+
+@media (max-width: 760px) {
+  .contact {
+    padding: 22px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
   }
 }

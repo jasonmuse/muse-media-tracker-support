@@ -8,4 +8,8 @@ from the `main` branch root.
   (the app links here from its paywall; keep this path)
 - `app-ads.txt` authorizes the app's AdMob inventory; keep it at the site root.
 
-Support requests use the issue forms in `.github/ISSUE_TEMPLATE`.
+People reach Muse privately through `contact.html`. Its form posts to the Muse API Worker
+(`POST https://muse-tracker-api.jasonmuse.workers.dev/api/contact`, in muse-media-tracker), and each
+message lands in the Feedback inbox in Muse Shelf, which only Muse admins can read. Links can preset
+the form, for example `contact.html?topic=report&app=frog-quest`. The pages no longer link to GitHub
+issues, which are public; the issue forms in `.github/ISSUE_TEMPLATE` are still there, but unlinked.
