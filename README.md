@@ -3,8 +3,8 @@
 Support and privacy pages for Muse Shelf (formerly Muse Media Tracker), served by GitHub Pages
 from the `main` branch root.
 
-- Support URL: `https://jasonmuse.github.io/muse-media-tracker-support/`
-- Privacy Policy URL: `https://jasonmuse.github.io/muse-media-tracker-support/privacy.html`
+- Support URL: `https://muse-media-tracker-support.pages.dev/`
+- Privacy Policy URL: `https://muse-media-tracker-support.pages.dev/privacy.html`
   (the app links here from its paywall; keep this path)
 - `app-ads.txt` authorizes the app's AdMob inventory; keep it at the site root.
 
