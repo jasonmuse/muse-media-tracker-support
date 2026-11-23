@@ -144,6 +144,15 @@
             Information shared with a connected service is also covered by that service's privacy
             policy.
           </p>
+          <p>
+            With edit permission, a connected AI can also give a title a picture, more pictures or
+            a trailer from a web page, such as a restaurant's own site, and details that page shows,
+            like its genres, its link and its rating. Muse's server opens that page to check them,
+            and asks YouTube whether a trailer exists and can play in other apps, then keeps their
+            web addresses with the title. Your devices then load the pictures from the sites that
+            host them and play trailers from YouTube, which may receive technical information such
+            as your device's IP address, as with covers from TMDB.
+          </p>
 
           <h2>Ask Muse</h2>
           <p>
@@ -153,10 +162,12 @@
           </p>
           <p>
             With Muse Pro, and only after you allow it, Ask Muse can answer with cloud AI. Your
-            question, the last few messages of that chat and a summary of your library are sent
-            through Muse's Cloudflare-hosted service to Claude, an AI model made by Anthropic, to
-            write the answer. The summary includes titles, kinds, release years and ratings from
-            your library, your favorite genres and creators, and Muse's For You picks for you.
+            question, the last few messages of that chat (with the titles it already suggested)
+            and a summary of your library are sent through Muse's Cloudflare-hosted service to
+            Claude, an AI model made by Anthropic, to write the answer. The summary includes
+            titles, kinds, release years and ratings from your library, the titles of the rest of
+            it (so it doesn't suggest what you already have), your favorite genres and creators,
+            and Muse's For You picks for you.
             Notes and reviews aren't sent. Muse doesn't keep your questions or answers on its
             servers; your chats stay on your device. Anthropic processes them to provide the
             answer under its commercial terms, which don't allow using them to train its models,
