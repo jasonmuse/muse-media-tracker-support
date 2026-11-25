@@ -7,7 +7,7 @@
     <meta name="description" content="Privacy policy for Muse Shelf (formerly Muse Media Tracker)." />
     <meta name="author" content="Jason Muse" />
     <meta name="theme-color" content="#07080e" />
-    <link rel="canonical" href="https://muse-media-tracker-support.pages.dev/privacy.html" />
+    <link rel="canonical" href="https://musemedia.app/privacy" />
     <link rel="icon" href="images/favicon.png" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
@@ -33,7 +33,7 @@
           <div>
             <p class="eyebrow">Muse Shelf</p>
             <h1 id="page-title">Privacy Policy</h1>
-            <p class="updated">Last updated: November 24, 2026</p>
+            <p class="updated">Last updated: November 25, 2026</p>
             <span class="formerly">Formerly Muse Media Tracker</span>
           </div>
         </section>
@@ -191,8 +191,8 @@
 
           <h2>Feedback</h2>
           <p>
-            If you send feedback from the app, Muse stores your message, the kind of feedback, the
-            app version and the platform, so the developer can read it and reply. You can write
+            If you send feedback from the app, Muse stores your message, any screenshots you attach,
+            the kind of feedback, the app version and the platform, so the developer can read it and reply. You can write
             back in the same report, and Muse keeps the whole conversation (your messages and the
             developer's replies) with it. When you open your feedback after a reply, Muse notes when,
             so the developer can see you've seen it. Once the developer has replied, you can mark a
@@ -223,6 +223,12 @@
             the app version, the device model and its system version) to Expo's EAS Observe service.
             These aren't linked to your Muse account and aren't used for ads or tracking.
           </p>
+          <p>
+            Each time it starts, the app asks Expo's update service whether a newer version of Muse
+            is ready, so it can update itself. That request carries your device's IP address, the
+            app's version details and a random install ID that Expo makes. It isn't linked to your
+            Muse account.
+          </p>
 
           <h2>Titles, Explore and alerts</h2>
           <p>
@@ -236,6 +242,12 @@
             Release, new-episode and season-premiere alerts are scheduled on your device. To plan
             them, Muse asks its metadata service for the episode calendars of shows in your
             library.
+          </p>
+          <p>
+            Where showtimes are available, a movie that's in theaters can show showtimes near you.
+            To find them, Muse's server sends the movie's title and a city (the approximate city of
+            your internet connection, or a place you type) to SerpApi, a search service. Your account
+            and your exact location aren't sent.
           </p>
 
           <h2>Purchases</h2>
